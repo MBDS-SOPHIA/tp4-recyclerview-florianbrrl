@@ -28,4 +28,22 @@ class FakeApiService : ApiService {
     override fun deleteUser(user: User) {
         _users.remove(user)
     }
+
+    override fun moveUser(fromPosition: Int, toPosition: Int) {
+        if (fromPosition < toPosition) {
+            for (i in fromPosition until toPosition) {
+                _users.swap(i, i + 1)
+            }
+        } else {
+            for (i in fromPosition downTo toPosition + 1) {
+                _users.swap(i, i - 1)
+            }
+        }
+    }
+
+    private fun MutableList<User>.swap(i: Int, j: Int) {
+        val temp = this[i]
+        this[i] = this[j]
+        this[j] = temp
+    }
 }

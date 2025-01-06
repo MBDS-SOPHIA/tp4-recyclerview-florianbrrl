@@ -17,4 +17,8 @@ class UserRepository(
     fun deleteUser(user: User) {
         apiService.deleteUser(user)
     }
+
+    fun moveUser(fromPosition: Int, toPosition: Int) {
+        apiService.moveUser(fromPosition, toPosition)
+    }
 }

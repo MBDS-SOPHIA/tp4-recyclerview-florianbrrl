@@ -6,4 +6,5 @@ interface ApiService {
     fun getUsers(): List<User>
     fun addRandomUser()
     fun deleteUser(username: User)
+    fun moveUser(fromPosition: Int, toPosition: Int)
 }
