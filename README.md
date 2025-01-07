@@ -34,5 +34,4 @@ Dans ce TP vous allez apprendre à manipuler les recyclerviews dans une applicat
 - Modifier les tests d'inferfaces 
 
 # Contributeurs
-
 BARRALI Florian
